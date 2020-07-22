@@ -1,0 +1,4 @@
+black
+requests
+stdlib-list
+timeout-decorator

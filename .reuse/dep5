@@ -1,0 +1,33 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Pyteen
+Upstream-Contact: Dinu Gherman <no@email.com>
+Source: https://github.com/deeplook/pyteen
+
+# Package content
+
+Files: README.rst
+       CHANGELOG.md
+       changes/*
+       docs/*
+       pyteen/*
+       tests/*
+       scripts/*
+       setup.cfg
+       setup.py
+       requirements*
+       Makefile
+Copyright: 2020, Dinu Gherman and the Pyteen contributors
+License: MIT
+
+# Service configuration
+
+Files: .adr-dir
+       .gitignore
+       .lgtm.yml
+       .proclamation.json
+       .pyup.yml
+       .readthedocs.yml
+       .travis.yml
+Copyright: 2020, Dinu Gherman and the Pyteen contributors
+License: MIT
+
