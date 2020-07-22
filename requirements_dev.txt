@@ -1,0 +1,10 @@
+codecov
+coverage
+isort
+mypy
+proclamation
+pytest
+pytest-cov
+pytest-flake8
+pytest-mypy
+sphinx

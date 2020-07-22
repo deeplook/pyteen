@@ -1,0 +1,6 @@
+path_classifiers:
+  test:
+    - tests
+  exclude:
+    - tests/failing
+    - pyteen/snippets/tests
