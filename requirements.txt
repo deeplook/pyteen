@@ -1,0 +1,11 @@
+black
+coverage
+isort
+mypy
+pytest
+pytest-cov
+pytest-flake8
+pytest-mypy
+requests
+stdlib-list
+timeout-decorator
