@@ -1,0 +1,12 @@
+language: python
+python:
+  - "3.7"
+  - "3.8"
+  - "3.9-dev"
+install:
+  - pip install -r requirements.txt
+  - pip install -r requirements_dev.txt
+  - pip install -e .
+script:
+  - pytest -s -v --cov-report=xml --cov=pyteen tests pyteen/snippets/tests
+  - codecov
