@@ -1,5 +1,5 @@
 black==19.10b0
-coverage
+coverage==5.2.1
 isort
 mypy
 pytest
