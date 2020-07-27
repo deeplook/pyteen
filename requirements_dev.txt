@@ -1,7 +1,7 @@
 codecov
 coverage
 isort
-mypy
+mypy==0.782
 pytest
 pytest-cov
 pytest-flake8
