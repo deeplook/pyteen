@@ -9,7 +9,7 @@ black:
 build:
 	python3 -m pip install -r requirements.txt
 
-clean: clean-build clean-pyc clean-test ## remove all build, test, coverage and Python artifacts
+clean: clean-build clean-pyc clean-test clean-doc ## remove all build, test, coverage and Python artifacts
 
 clean-build: ## remove build artifacts
 	rm -fr build/
@@ -25,12 +25,17 @@ clean-pyc: ## remove Python file artifacts
 	find . -name '__pycache__' -exec rm -fr {} +
 
 clean-test: ## remove test and coverage artifacts
-	# rm -fr .tox/
 	rm -f .coverage
 	rm -fr htmlcov/
 	rm -fr .mypy_cache
 	rm -fr .pytest_cache
 	find . -name '.ipynb_checkpoints' -exec rm -fr {} +
+
+clean-doc:
+	pushd docs && make clean && popd
+
+doc:
+	pushd docs && make html && popd
 
 install:
 	python3 -m pip install -e .
@@ -44,9 +49,7 @@ lint:
 	black -l 79 --diff --check pyteen tests
 
 test:
-	# pytest -v -s --cov=pyteen.py tests
 	pytest -s -v --cov-report=xml --cov=pyteen tests pyteen/snippets/tests
-	# coverage html
 
 tree:
 	tree .

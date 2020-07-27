@@ -11,7 +11,11 @@ def search(sender, m):
     m.center = [lat, lon]
     m += Marker(location=m.center)
 
-m = Map(center=[0, 0], zoom=2)
-tx = Text(layout=Layout(width="200px"))
-tx.on_submit(partial(search, m=m))
-m += WidgetControl(widget=tx, position="topright")
+def make_map():
+    m = Map(center=[0, 0], zoom=2)
+    tx = Text(layout=Layout(width="200px"))
+    # tx.on_submit(partial(search, m=m))
+    tx.continuous_update = False
+    tx.observe(partial(search, m=m), 'value')
+    m += WidgetControl(widget=tx, position="topright")
+    return m, tx

@@ -18,8 +18,10 @@ std_libs = stdlib_list(".".join(map(str, sys.version_info[:2])))
 
 class ImportFinder(ast.NodeVisitor):
     """An AST node visitor to collect information about import statements.
-    """
 
+    The package named found are collected into the instance variable
+    ``imported_names`` (a set).
+    """
     def __init__(self, *args, **kwargs):
         self.imported_names = set()
         super(*args, **kwargs)
@@ -114,18 +116,18 @@ def validate(source_code: str, raise_immediately: bool = True) -> str:
     # Check imports are published on PyPI.org/Anaconda.org
     # https://stackoverflow.com/questions/21419009/json-api-for-pypi-how-to-list-packages
     imported_names = ImportFinder().analyse_code(source_code)
-    pip_available = [
+    pip_available = set(
         pkg_name for pkg_name in imported_names if pip_installable(pkg_name)
-    ]
+    )
     # conda_available = [pkg_name for pkg_name in imported_names if conda_installable(pkg_name)]
-    stdlib_available = [
+    stdlib_available = set(
         pkg_name for pkg_name in imported_names if pkg_name in std_libs
-    ]
-    unknown = [
+    )
+    unknown = set(
         pkg_name
         for pkg_name in imported_names
         if pkg_name not in stdlib_available and pkg_name not in pip_available
-    ]
+    )
     if raise_immediately and len(unknown) > 0:
         msg = (
             f"Found unknown dependencies {unknown}. "
