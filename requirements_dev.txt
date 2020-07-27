@@ -1,4 +1,4 @@
-codecov
+codecov==2.1.8
 coverage
 isort
 mypy
