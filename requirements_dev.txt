@@ -2,7 +2,7 @@ codecov
 coverage
 isort
 mypy
-pytest
+pytest==5.4.3
 pytest-cov
 pytest-flake8
 pytest-mypy
