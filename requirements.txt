@@ -1,4 +1,4 @@
 black
-requests
+requests==2.24.0
 stdlib-list
 timeout-decorator
