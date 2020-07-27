@@ -7,5 +7,5 @@ pytest-cov==2.10.0
 pytest-flake8==1.0.6
 pytest-mypy==0.6.2
 requests==2.24.0
-stdlib-list
+stdlib-list==0.7.0
 timeout-decorator
