@@ -49,7 +49,7 @@ lint:
 	black -l 79 --diff --check pyteen tests
 
 test:
-	pytest -s -v --cov-report=xml --cov=pyteen tests pyteen/snippets/tests
+	pytest -s -v --cov-report=xml --cov=pyteen tests pyteen/snippets
 
 tree:
 	tree .
