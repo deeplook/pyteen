@@ -4,6 +4,6 @@ isort
 mypy
 pytest
 pytest-cov
-pytest-flake8
+pytest-flake8==1.0.6
 pytest-mypy
 sphinx
