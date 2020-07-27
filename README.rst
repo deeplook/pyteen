@@ -28,7 +28,7 @@ Pyteen
 .. image:: https://pepy.tech/badge/pyteen/month
   :target: https://pepy.tech/project/pyteen/month
 
-This is a collection of self-contained, useful, short Python code snippets that are (1) all tested and validated, (2) easy to contribute to, and (3) simple to reuse.
+This is a (very, very small) collection of self-contained, useful, short Python code snippets that are (1) all tested and validated, (2) easy to contribute to, and (3) simple to reuse.
 
 Size Matters
 ------------
