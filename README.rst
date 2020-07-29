@@ -1,12 +1,12 @@
 Pyteen
 ======
 
-.. image:: https://img.shields.io/travis/deeplook/pyteen/master.svg
-  :target: https://travis-ci.org/deeplook/pyteen
-
 .. image:: https://readthedocs.org/projects/pyteen/badge/?version=latest
   :target: https://pyteen.readthedocs.io/en/latest/?badge=latest
      :alt: Documentation Status
+
+.. image:: https://img.shields.io/travis/deeplook/pyteen/master.svg
+  :target: https://travis-ci.org/deeplook/pyteen
 
 .. image:: https://img.shields.io/pypi/pyversions/pyteen.svg
   :target: https://pypi.org/project/pyteen
