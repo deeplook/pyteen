@@ -1,6 +1,6 @@
 codecov
 coverage
-isort
+isort==5.2.1
 mypy
 pytest
 pytest-cov
