@@ -44,7 +44,7 @@ Pyteen
 Intro
 -----
 
-This is a tiny collection of self-contained, short Python code snippets that are (1) all tested and validated, (2) easy to contribute to, and (3) simple to reuse.
+This is an emerging package for managing a collection of self-contained, short Python code snippets that are all tested and validated, easy to contribute to, and simple to reuse.
 
 
 .. include:: pyteen/core.py

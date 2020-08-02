@@ -10,7 +10,7 @@ Pyteen
    :maxdepth: 2
    :caption: Contents:
 
-This is a tiny collection of self-contained, short Python code snippets that are (1) all tested and validated, (2) easy to contribute to, and (3) simple to reuse.
+This is an emerging package for managing a collection of self-contained, short Python code snippets that are all tested and validated, easy to contribute to, and simple to reuse.
 
 Code size
 ---------
@@ -38,6 +38,6 @@ Example
 
 .. literalinclude:: ../pyteen/snippets/algorithms/sieve_eratosthenes.py
    :language: python
-   :emphasize-lines: 1,7-8,10,12-15,17-
+   :emphasize-lines: 1,4,8-9,11,13-16,18-
    :linenos:
-   :caption: "Sieve of Eratosthenes" code with 11 effective lines highlighted
+   :caption: "Sieve of Eratosthenes" code with 12 effective lines highlighted

@@ -1,6 +1,7 @@
-def sieve_of_eratosthenes(n: int):
+def sieve_of_eratosthenes(n):
     """Yield primes in [2..n] using the "Sieve of Eratosthenes".
     """
+    assert type(n) == int
     # Create a Boolean array "prime[0..n]" and initialize
     # all entries in it as true. A value in prime[i] will
     # finally be false if i is not a prime, else true.

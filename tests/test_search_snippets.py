@@ -23,4 +23,4 @@ def test_show(capsys):
     """
     show(sieve_eratosthenes)
     captured = capsys.readouterr()
-    assert captured.out.startswith("def sieve_of_eratosthenes(n: int):")
+    assert captured.out.startswith("def sieve_of_eratosthenes(n):")
