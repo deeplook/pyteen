@@ -1,4 +1,4 @@
-from sieve_eratosthenes import sieve_of_eratosthenes as sieve
+from .sieve_eratosthenes import sieve_of_eratosthenes as sieve
 
 
 def test():

@@ -1,7 +1,11 @@
 from pathlib import Path
 from types import ModuleType
 
-import pytest
+try:
+    import pytest
+    HAVE_PYTEST = True
+except ImportError:
+    HAVE_PYTEST = False
 
 
 def search(query: str = ""):
@@ -27,5 +31,8 @@ def show(mod: ModuleType = None):
 def test():
     """Execute the tests inside the pyteen snippets collection.
     """
-    folder = str(Path(__file__).parent.absolute())
-    pytest.main(["-s", "-v", folder])
+    if HAVE_PYTEST:
+        folder = str(Path(__file__).parent.absolute())
+        pytest.main(["-s", "-v", folder])
+    else:
+        print("Could not find pytest, skipping...")
