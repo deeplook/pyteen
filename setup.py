@@ -11,7 +11,7 @@ with open(join(this_directory, "README.rst"), encoding="utf-8") as f:
     long_description = f.read()
 packages = find_packages(exclude=["docs", "tests"])
 version = {}
-with open('{}/__version__.py'.format(packages[0])) as f:
+with open('{}/version.py'.format(packages[0])) as f:
     exec(f.read(), version)
 
 setup(

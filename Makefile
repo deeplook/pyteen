@@ -57,5 +57,11 @@ snippet_coverage:
 	coverage json --omit="*/__init__.py,*/test*.py" $(shell find pyteen/snippets -name "*.py")
 	python3 scripts/test_snippet_coverage.py
 
+draft_changelog:
+	proclamation draft $(shell python -c "from pyteen import __version__; print(__version__)")
+
+build_changelog:
+	proclamation build -o -r $(shell python -c "from pyteen import __version__; print(__version__)")
+
 tree:
 	tree .
