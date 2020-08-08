@@ -25,7 +25,7 @@ clean-pyc: ## remove Python file artifacts
 	find . -name '__pycache__' -exec rm -fr {} +
 
 clean-test: ## remove test and coverage artifacts
-	rm -f .coverage
+	rm -f .coverage coverage.json coverage.xml
 	rm -fr htmlcov/
 	rm -fr .mypy_cache
 	rm -fr .pytest_cache
@@ -50,6 +50,12 @@ lint:
 
 test:
 	pytest -s -v --cov-report=xml --cov=pyteen tests pyteen/snippets
+
+snippet_coverage:
+	coverage run --source=pyteen/snippets $(shell which pytest) -v -s pyteen/snippets
+	coverage report -m --omit="*/__init__.py,*/test*.py" $(shell find pyteen/snippets -name "*.py")
+	coverage json --omit="*/__init__.py,*/test*.py" $(shell find pyteen/snippets -name "*.py")
+	python3 scripts/test_snippet_coverage.py
 
 tree:
 	tree .
