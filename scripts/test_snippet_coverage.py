@@ -17,8 +17,8 @@ def test_snippets_coverage(coverage_path="coverage.json", min_threshold=80):
         if re.match("test.*\.py", basename(path)):
             continue
         cov = data["summary"]["percent_covered"]
+        print(f"{path}, {cov} % coverage (min: 80 %)")
         if cov < 80:
-            print(f"{path}, {cov} % coverage (min: 80 %)")
             failed = True
     if failed:
         sys.exit(1)
